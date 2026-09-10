@@ -4,6 +4,8 @@ Agente que atende um lead de seguro auto pelo WhatsApp (simulado): conversa, qua
 cota via API instável e decide sozinho ou encaminha para um humano. Desafio take-home FDE
 da Namastex. Plano completo, discovery e logs de IA em [`ai-logs/`](ai-logs/).
 
+![Interface do AutoSeguro Agent](assets/print-ferramenta-agent.png)
+
 ## Como rodar
 
 ```bash
