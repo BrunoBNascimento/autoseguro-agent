@@ -1,0 +1,49 @@
+# Registro das regras de negócio com id rastreável. O id aparece em `rules_applied` no
+# trace e nas asserções dos evals. `enforced_by` diz qual mecanismo de CÓDIGO garante a
+# regra — se uma regra só existisse no prompt, ela não estaria implementada.
+rules:
+  BR-01:
+    text: "A API de cotação é a única fonte de verdade de preço."
+    enforced_by: "price_gate"
+  BR-02:
+    text: "Sem cotação bem-sucedida, nenhum preço é informado ou estimado."
+    enforced_by: "price_gate"
+  BR-03:
+    text: "O agente não altera preços."
+    enforced_by: "price_gate"
+  BR-04:
+    text: "O agente não concede descontos."
+    enforced_by: "authority_gate"
+  BR-05:
+    text: "O agente não cria condições comerciais (ex.: mexer na franquia)."
+    enforced_by: "authority_gate"
+  BR-06:
+    text: "O agente não inventa benefícios ou coberturas."
+    enforced_by: "coverage_gate"
+  BR-07:
+    text: "Objeção — entender o motivo e demonstrar valor com informação conhecida; não negociar."
+    enforced_by: "skill objection_handling + authority_gate"
+  BR-08:
+    text: "Handoff quando a situação exige negociação, exceção comercial ou informação que o agente não possui."
+    enforced_by: "handoff_gate"
+  BR-09:
+    text: "Handoff quando o lead pede atendimento humano."
+    enforced_by: "handoff_gate"
+  BR-10:
+    text: "Handoff quando a cotação falha definitivamente."
+    enforced_by: "handoff_gate"
+  BR-11:
+    text: "Handoff quando o caso está fora do escopo ou das regras disponíveis."
+    enforced_by: "handoff_gate"
+  BR-12:
+    text: "Recusa de subscrição (idade acima de 75 ou veículo com mais de 20 anos) é desfecho próprio, não handoff comercial."
+    enforced_by: "evento quote_refused → skill underwriting_refusal"
+  BR-13:
+    text: "A carência de 30 dias para roubo e furto é comunicada junto com a cotação."
+    enforced_by: "skill coverage_explanation + asserção de eval"
+  BR-14:
+    text: "O pro-rata do primeiro mês é informado quando a vigência não começa no dia 1º."
+    enforced_by: "payload da cotação + skill quote"
+  SEC-01:
+    text: "Instruções internas, catálogo e nomes de skills não são revelados ao lead."
+    enforced_by: "disclosure_gate"

@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+
+# Segredos — nunca versionar
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+
+# Node / Next.js
+web/node_modules/
+web/.next/
+web/out/
+web/next-env.d.ts
+web/tsconfig.tsbuildinfo
+
+# Traces de execução local. O log da demo (entregável) vive versionado em docs/demo/.
+data/traces/*
+!data/traces/.gitkeep
+
+# Cache do classificador de injection e dos evals
+evals/.cache/
+
+# OS / editores
+.DS_Store
+.idea/
+.vscode/
+
+# Os logs de IA são entregável do desafio — nunca ignorar ai-logs/
+!ai-logs/**

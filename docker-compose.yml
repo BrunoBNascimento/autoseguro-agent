@@ -1,0 +1,51 @@
+# Sobe tudo com um comando: docker compose up --build
+# Três serviços, zero banco. Estado em memória + trace JSONL em ./data/traces.
+services:
+  quote-api:
+    build: ./vendor/namastex-fde-challenge/quote-service
+    ports:
+      - "8000:8000"
+    environment:
+      QUOTE_FAILURE_RATE: ${QUOTE_FAILURE_RATE:-0.20}
+      QUOTE_SLOW_RATE: ${QUOTE_SLOW_RATE:-0.10}
+      QUOTE_SLOW_SECONDS: ${QUOTE_SLOW_SECONDS:-8}
+      QUOTE_SEED: ${QUOTE_SEED:-}
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health', timeout=2)"]
+      interval: 5s
+      timeout: 3s
+      retries: 12
+    restart: unless-stopped
+
+  agent-api:
+    build: .
+    ports:
+      - "8080:8080"
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      QUOTE_API_URL: http://quote-api:8000
+      TRACE_DIR: /app/data/traces
+    volumes:
+      - ./data/traces:/app/data/traces
+    depends_on:
+      quote-api:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8080/health', timeout=2)"]
+      interval: 5s
+      timeout: 3s
+      retries: 12
+    restart: unless-stopped
+
+  web:
+    build: ./web
+    ports:
+      - "3000:3000"
+    environment:
+      AGENT_API_URL: http://agent-api:8080
+    depends_on:
+      agent-api:
+        condition: service_healthy
+    restart: unless-stopped

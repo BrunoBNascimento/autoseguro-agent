@@ -1,0 +1,706 @@
+[
+ {
+  "case_id": "ds_conv_01553",
+  "source_conversation_id": "conv_01553",
+  "outcome": "em_negociacao",
+  "refusal_eligible": false,
+  "profile": {
+   "idade": 31,
+   "veiculo_ano": 2012,
+   "cep_prefix": "30***-***",
+   "plano": "premium",
+   "high_risk_region": false
+  },
+  "dataset_price": 349.9,
+  "api_price": 492.85,
+  "api_refusal": null,
+  "lead_turns": [
+   "Ola! Vi o anuncio de voces, quanto fica o seguro?",
+   "Hyundai HB20 2012",
+   "Tenho 31 anos, cep 30***-***, cpf [CPF]",
+   "to no aguardo",
+   "vou ver com minha esposa",
+   "pode mandar sim"
+  ],
+  "expected": {
+   "no_price_before_quote": true,
+   "refused": false,
+   "carencia_mentioned_when_quoted": true
+  }
+ },
+ {
+  "case_id": "ds_conv_00270",
+  "source_conversation_id": "conv_00270",
+  "outcome": "em_negociacao",
+  "refusal_eligible": false,
+  "profile": {
+   "idade": 47,
+   "veiculo_ano": 2011,
+   "cep_prefix": "20***-***",
+   "plano": "essencial",
+   "high_risk_region": false
+  },
+  "dataset_price": 219.9,
+  "api_price": 173.85,
+  "api_refusal": null,
+  "lead_turns": [
+   "eae, tudo bem? to querendo segurar meu carro",
+   "Polo, ano 2011",
+   "Cep 20***-***, tenho 47 anos, cpf [CPF]",
+   "meu email é [EMAIL] e o whats é esse mesmo [TELEFONE]",
+   "[documento] CNH_frente.pdf",
+   "a placa é [PLACA] se precisar",
+   "a franquia ta alta",
+   "pode mandar sim"
+  ],
+  "expected": {
+   "no_price_before_quote": true,
+   "refused": false,
+   "carencia_mentioned_when_quoted": true
+  }
+ },
+ {
+  "case_id": "ds_conv_00051",
+  "source_conversation_id": "conv_00051",
+  "outcome": "em_negociacao",
+  "refusal_eligible": false,
+  "profile": {
+   "idade": 36,
+   "veiculo_ano": 2012,
+   "cep_prefix": "13***-***",
+   "plano": "premium",
+   "high_risk_region": false
+  },
+  "dataset_price": 159.9,
+  "api_price": 492.85,
+  "api_refusal": null,
+  "lead_turns": [
+   "Boa tarde, quero uma cotacao",
+   "Chevrolet Onix 2012",
+   "Cep 13***-***, cpf [CPF], tenho 36 anos",
+   "meu email é [EMAIL] e o whats é esse mesmo [TELEFONE]",
+   "[imagem] foto do veiculo na garagem",
+   "[audio] mensagem de voz (18s)",
+   "to no aguardo",
+   "vi mais barato na concorrente",
+   "pode mandar sim"
+  ],
+  "expected": {
+   "no_price_before_quote": true,
+   "refused": false,
+   "carencia_mentioned_when_quoted": true
+  }
+ },
+ {
+  "case_id": "ds_conv_01899",
+  "source_conversation_id": "conv_01899",
+  "outcome": "em_negociacao",
+  "refusal_eligible": true,
+  "profile": {
+   "idade": 46,
+   "veiculo_ano": 2004,
+   "cep_prefix": "01***-***",
+   "plano": "completo",
+   "high_risk_region": false
+  },
+  "dataset_price": 349.9,
+  "api_price": null,
+  "api_refusal": "Veiculo com mais de 20 anos nao e aceito.",
+  "lead_turns": [
+   "eae, tudo bem? to querendo segurar meu carro",
+   "Renault Kwid 2004",
+   "Cep 01***-***, cpf [CPF], tenho 46 anos",
+   "meu email é [EMAIL] e o whats é esse mesmo [TELEFONE]",
+   "[imagem] foto do veiculo na garagem",
+   "a placa é [PLACA] se precisar",
+   "vi mais barato na concorrente",
+   "pode mandar sim"
+  ],
+  "expected": {
+   "no_price_before_quote": true,
+   "refused": true,
+   "carencia_mentioned_when_quoted": false
+  }
+ },
+ {
+  "case_id": "ds_conv_00674",
+  "source_conversation_id": "conv_00674",
+  "outcome": "em_negociacao",
+  "refusal_eligible": true,
+  "profile": {
+   "idade": 80,
+   "veiculo_ano": 2022,
+   "cep_prefix": "07***-***",
+   "plano": "essencial",
+   "high_risk_region": true
+  },
+  "dataset_price": 159.9,
+  "api_price": null,
+  "api_refusal": "Idade acima do limite de aceitacao (75 anos).",
+  "lead_turns": [
+   "eae, tudo bem? to querendo segurar meu carro",
+   "e um Argo 2022",
+   "Cpf [CPF], tenho 80 anos, cep 07***-***",
+   "meu email é [EMAIL] e o whats é esse mesmo [TELEFONE]",
+   "a placa é [PLACA] se precisar",
+   "vi mais barato na concorrente",
+   "pode mandar sim"
+  ],
+  "expected": {
+   "no_price_before_quote": true,
+   "refused": true,
+   "carencia_mentioned_when_quoted": false
+  }
+ },
+ {
+  "case_id": "ds_conv_00614",
+  "source_conversation_id": "conv_00614",
+  "outcome": "em_negociacao",
+  "refusal_eligible": true,
+  "profile": {
+   "idade": 78,
+   "veiculo_ano": 2018,
+   "cep_prefix": "04***-***",
+   "plano": "completo",
+   "high_risk_region": false
+  },
+  "dataset_price": 219.9,
+  "api_price": null,
+  "api_refusal": "Idade acima do limite de aceitacao (75 anos).",
+  "lead_turns": [
+   "Oi, queria fazer um seguro pro meu carro",
+   "Onix, ano 2018",
+   "Cep 04***-***, tenho 78 anos, cpf [CPF]",
+   "meu email é [EMAIL] e o whats é esse mesmo [TELEFONE]",
+   "[documento] CNH_frente.pdf",
+   "a placa é [PLACA] se precisar",
+   "vi mais barato na concorrente",
+   "pode mandar sim"
+  ],
+  "expected": {
+   "no_price_before_quote": true,
+   "refused": true,
+   "carencia_mentioned_when_quoted": false
+  }
+ },
+ {
+  "case_id": "ds_conv_00572",
+  "source_conversation_id": "conv_00572",
+  "outcome": "ganho",
+  "refusal_eligible": false,
+  "profile": {
+   "idade": 31,
+   "veiculo_ano": 2019,
+   "cep_prefix": "04***-***",
+   "plano": "essencial",
+   "high_risk_region": false
+  },
+  "dataset_price": 389.9,
+  "api_price": 137.88,
+  "api_refusal": null,
+  "lead_turns": [
+   "Boa tarde, quero uma cotacao",
+   "Chevrolet Onix 2019",
+   "Cpf [CPF], cep 04***-***, tenho 31 anos",
+   "meu email é [EMAIL] e o whats é esse mesmo [TELEFONE]",
+   "[documento] CNH_frente.pdf",
+   "a placa é [PLACA] se precisar",
+   "vamos nessa, gostei"
+  ],
+  "expected": {
+   "no_price_before_quote": true,
+   "refused": false,
+   "carencia_mentioned_when_quoted": true
+  }
+ },
+ {
+  "case_id": "ds_conv_00306",
+  "source_conversation_id": "conv_00306",
+  "outcome": "ganho",
+  "refusal_eligible": false,
+  "profile": {
+   "idade": 64,
+   "veiculo_ano": 2015,
+   "cep_prefix": "26***-***",
+   "plano": "completo",
+   "high_risk_region": true
+  },
+  "dataset_price": 349.9,
+  "api_price": 553.93,
+  "api_refusal": null,
+  "lead_turns": [
+   "eae, tudo bem? to querendo segurar meu carro",
+   "e um HB20 2015",
+   "Cpf [CPF], tenho 64 anos, cep 26***-***",
+   "qualquer coisa me chama",
+   "fechado!"
+  ],
+  "expected": {
+   "no_price_before_quote": true,
+   "refused": false,
+   "carencia_mentioned_when_quoted": true
+  }
+ },
+ {
+  "case_id": "ds_conv_01799",
+  "source_conversation_id": "conv_01799",
+  "outcome": "ganho",
+  "refusal_eligible": false,
+  "profile": {
+   "idade": 52,
+   "veiculo_ano": 2006,
+   "cep_prefix": "13***-***",
+   "plano": "essencial",
+   "high_risk_region": false
+  },
+  "dataset_price": 299.9,
+  "api_price": 173.85,
+  "api_refusal": null,
+  "lead_turns": [
+   "Oi, queria fazer um seguro pro meu carro",
+   "Hyundai HB20 2006",
+   "Tenho 52 anos, cpf [CPF], cep 13***-***",
+   "meu email é [EMAIL] e o whats é esse mesmo [TELEFONE]",
+   "a placa é [PLACA] se precisar",
+   "pode emitir entao"
+  ],
+  "expected": {
+   "no_price_before_quote": true,
+   "refused": false,
+   "carencia_mentioned_when_quoted": true
+  }
+ },
+ {
+  "case_id": "ds_conv_00477",
+  "source_conversation_id": "conv_00477",
+  "outcome": "ganho",
+  "refusal_eligible": true,
+  "profile": {
+   "idade": 55,
+   "veiculo_ano": 2005,
+   "cep_prefix": "04***-***",
+   "plano": "essencial",
+   "high_risk_region": false
+  },
+  "dataset_price": 389.9,
+  "api_price": null,
+  "api_refusal": "Veiculo com mais de 20 anos nao e aceito.",
+  "lead_turns": [
+   "eae, tudo bem? to querendo segurar meu carro",
+   "Honda Civic 2005",
+   "Cep 04***-***, tenho 55 anos, cpf [CPF]",
+   "meu email é [EMAIL] e o whats é esse mesmo [TELEFONE]",
+   "to no aguardo",
+   "pode emitir entao"
+  ],
+  "expected": {
+   "no_price_before_quote": true,
+   "refused": true,
+   "carencia_mentioned_when_quoted": false
+  }
+ },
+ {
+  "case_id": "ds_conv_02185",
+  "source_conversation_id": "conv_02185",
+  "outcome": "ganho",
+  "refusal_eligible": true,
+  "profile": {
+   "idade": 50,
+   "veiculo_ano": 2001,
+   "cep_prefix": "04***-***",
+   "plano": "essencial",
+   "high_risk_region": false
+  },
+  "dataset_price": 259.9,
+  "api_price": null,
+  "api_refusal": "Veiculo com mais de 20 anos nao e aceito.",
+  "lead_turns": [
+   "Ola! Vi o anuncio de voces, quanto fica o seguro?",
+   "Honda HR-V 2001",
+   "Tenho 50 anos, cep 04***-***, cpf [CPF]",
+   "[documento] CNH_frente.pdf",
+   "qualquer coisa me chama",
+   "vamos nessa, gostei"
+  ],
+  "expected": {
+   "no_price_before_quote": true,
+   "refused": true,
+   "carencia_mentioned_when_quoted": false
+  }
+ },
+ {
+  "case_id": "ds_conv_02382",
+  "source_conversation_id": "conv_02382",
+  "outcome": "ganho",
+  "refusal_eligible": true,
+  "profile": {
+   "idade": 77,
+   "veiculo_ano": 2003,
+   "cep_prefix": "20***-***",
+   "plano": "premium",
+   "high_risk_region": false
+  },
+  "dataset_price": 389.9,
+  "api_price": null,
+  "api_refusal": "Idade acima do limite de aceitacao (75 anos).",
+  "lead_turns": [
+   "eae, tudo bem? to querendo segurar meu carro",
+   "Renegade, ano 2003",
+   "Cpf [CPF], cep 20***-***, tenho 77 anos",
+   "[imagem] foto do veiculo na garagem",
+   "a placa é [PLACA] se precisar",
+   "pode emitir entao"
+  ],
+  "expected": {
+   "no_price_before_quote": true,
+   "refused": true,
+   "carencia_mentioned_when_quoted": false
+  }
+ },
+ {
+  "case_id": "ds_conv_01781",
+  "source_conversation_id": "conv_01781",
+  "outcome": "perdido",
+  "refusal_eligible": false,
+  "profile": {
+   "idade": 27,
+   "veiculo_ano": 2023,
+   "cep_prefix": "41***-***",
+   "plano": "premium",
+   "high_risk_region": false
+  },
+  "dataset_price": 129.9,
+  "api_price": 424.88,
+  "api_refusal": null,
+  "lead_turns": [
+   "Boa tarde, quero uma cotacao",
+   "e um Creta 2023",
+   "Cep 41***-***, tenho 27 anos, cpf [CPF]",
+   "meu email é [EMAIL] e o whats é esse mesmo [TELEFONE]",
+   "qualquer coisa me chama",
+   "a franquia ta alta... a SulAmerica me ofereceu menos",
+   "vou ficar com a outra"
+  ],
+  "expected": {
+   "no_price_before_quote": true,
+   "refused": false,
+   "carencia_mentioned_when_quoted": true
+  }
+ },
+ {
+  "case_id": "ds_conv_00258",
+  "source_conversation_id": "conv_00258",
+  "outcome": "perdido",
+  "refusal_eligible": false,
+  "profile": {
+   "idade": 72,
+   "veiculo_ano": 2012,
+   "cep_prefix": "04***-***",
+   "plano": "premium",
+   "high_risk_region": false
+  },
+  "dataset_price": 299.9,
+  "api_price": 690.0,
+  "api_refusal": null,
+  "lead_turns": [
+   "Oi, queria fazer um seguro pro meu carro",
+   "e um T-Cross 2012",
+   "Cpf [CPF], tenho 72 anos, cep 04***-***",
+   "meu email é [EMAIL] e o whats é esse mesmo [TELEFONE]",
+   "qualquer coisa me chama",
+   "vi mais barato na concorrente... a Itau Auto me ofereceu menos",
+   "nao precisa, obrigado"
+  ],
+  "expected": {
+   "no_price_before_quote": true,
+   "refused": false,
+   "carencia_mentioned_when_quoted": true
+  }
+ },
+ {
+  "case_id": "ds_conv_01928",
+  "source_conversation_id": "conv_01928",
+  "outcome": "perdido",
+  "refusal_eligible": false,
+  "profile": {
+   "idade": 49,
+   "veiculo_ano": 2023,
+   "cep_prefix": "88***-***",
+   "plano": "premium",
+   "high_risk_region": false
+  },
+  "dataset_price": 219.9,
+  "api_price": 339.9,
+  "api_refusal": null,
+  "lead_turns": [
+   "Oi, queria fazer um seguro pro meu carro",
+   "e um Civic 2023",
+   "Tenho 49 anos, cpf [CPF], cep 88***-***",
+   "meu email é [EMAIL] e o whats é esse mesmo [TELEFONE]",
+   "to no aguardo",
+   "o preco ta salgado... a Itau Auto me ofereceu menos",
+   "vou ficar com a outra"
+  ],
+  "expected": {
+   "no_price_before_quote": true,
+   "refused": false,
+   "carencia_mentioned_when_quoted": true
+  }
+ },
+ {
+  "case_id": "ds_conv_01841",
+  "source_conversation_id": "conv_01841",
+  "outcome": "perdido",
+  "refusal_eligible": true,
+  "profile": {
+   "idade": 82,
+   "veiculo_ano": 2017,
+   "cep_prefix": "80***-***",
+   "plano": "premium",
+   "high_risk_region": false
+  },
+  "dataset_price": 349.9,
+  "api_price": null,
+  "api_refusal": "Idade acima do limite de aceitacao (75 anos).",
+  "lead_turns": [
+   "Oi, queria fazer um seguro pro meu carro",
+   "e um Creta 2017",
+   "Tenho 82 anos, cep 80***-***, cpf [CPF]",
+   "[documento] CNH_frente.pdf",
+   "qualquer coisa me chama",
+   "vi mais barato na concorrente... a SulAmerica me ofereceu menos",
+   "deixa pra la por enquanto"
+  ],
+  "expected": {
+   "no_price_before_quote": true,
+   "refused": true,
+   "carencia_mentioned_when_quoted": false
+  }
+ },
+ {
+  "case_id": "ds_conv_00149",
+  "source_conversation_id": "conv_00149",
+  "outcome": "perdido",
+  "refusal_eligible": true,
+  "profile": {
+   "idade": 32,
+   "veiculo_ano": 2002,
+   "cep_prefix": "88***-***",
+   "plano": "essencial",
+   "high_risk_region": false
+  },
+  "dataset_price": 389.9,
+  "api_price": null,
+  "api_refusal": "Veiculo com mais de 20 anos nao e aceito.",
+  "lead_turns": [
+   "eae, tudo bem? to querendo segurar meu carro",
+   "Compass, ano 2002",
+   "Cep 88***-***, cpf [CPF], tenho 32 anos",
+   "a placa é [PLACA] se precisar",
+   "vi mais barato na concorrente... a Azul Seguros me ofereceu menos",
+   "deixa pra la por enquanto"
+  ],
+  "expected": {
+   "no_price_before_quote": true,
+   "refused": true,
+   "carencia_mentioned_when_quoted": false
+  }
+ },
+ {
+  "case_id": "ds_conv_00145",
+  "source_conversation_id": "conv_00145",
+  "outcome": "perdido",
+  "refusal_eligible": true,
+  "profile": {
+   "idade": 49,
+   "veiculo_ano": 2001,
+   "cep_prefix": "21***-***",
+   "plano": "completo",
+   "high_risk_region": true
+  },
+  "dataset_price": 259.9,
+  "api_price": null,
+  "api_refusal": "Veiculo com mais de 20 anos nao e aceito.",
+  "lead_turns": [
+   "Boa tarde, quero uma cotacao",
+   "Fiat Toro 2001",
+   "Tenho 49 anos, cep 21***-***, cpf [CPF]",
+   "[imagem] foto do veiculo na garagem",
+   "a placa é [PLACA] se precisar",
+   "preciso pensar... a Porto Seguro me ofereceu menos",
+   "deixa pra la por enquanto"
+  ],
+  "expected": {
+   "no_price_before_quote": true,
+   "refused": true,
+   "carencia_mentioned_when_quoted": false
+  }
+ },
+ {
+  "case_id": "ds_conv_00331",
+  "source_conversation_id": "conv_00331",
+  "outcome": "sem_resposta",
+  "refusal_eligible": false,
+  "profile": {
+   "idade": 59,
+   "veiculo_ano": 2020,
+   "cep_prefix": "51***-***",
+   "plano": "completo",
+   "high_risk_region": false
+  },
+  "dataset_price": 259.9,
+  "api_price": 241.38,
+  "api_refusal": null,
+  "lead_turns": [
+   "eae, tudo bem? to querendo segurar meu carro",
+   "Hyundai HB20 2020",
+   "Cep 51***-***, tenho 59 anos, cpf [CPF]",
+   "qualquer coisa me chama"
+  ],
+  "expected": {
+   "no_price_before_quote": true,
+   "refused": false,
+   "carencia_mentioned_when_quoted": true
+  }
+ },
+ {
+  "case_id": "ds_conv_00708",
+  "source_conversation_id": "conv_00708",
+  "outcome": "sem_resposta",
+  "refusal_eligible": false,
+  "profile": {
+   "idade": 33,
+   "veiculo_ano": 2019,
+   "cep_prefix": "30***-***",
+   "plano": "completo",
+   "high_risk_region": false
+  },
+  "dataset_price": 259.9,
+  "api_price": 241.38,
+  "api_refusal": null,
+  "lead_turns": [
+   "Ola! Vi o anuncio de voces, quanto fica o seguro?",
+   "Hyundai Creta 2019",
+   "Cep 30***-***, cpf [CPF], tenho 33 anos",
+   "meu email é [EMAIL] e o whats é esse mesmo [TELEFONE]",
+   "qualquer coisa me chama"
+  ],
+  "expected": {
+   "no_price_before_quote": true,
+   "refused": false,
+   "carencia_mentioned_when_quoted": true
+  }
+ },
+ {
+  "case_id": "ds_conv_00756",
+  "source_conversation_id": "conv_00756",
+  "outcome": "sem_resposta",
+  "refusal_eligible": false,
+  "profile": {
+   "idade": 53,
+   "veiculo_ano": 2008,
+   "cep_prefix": "51***-***",
+   "plano": "essencial",
+   "high_risk_region": false
+  },
+  "dataset_price": 349.9,
+  "api_price": 173.85,
+  "api_refusal": null,
+  "lead_turns": [
+   "eae, tudo bem? to querendo segurar meu carro",
+   "T-Cross, ano 2008",
+   "Cep 51***-***, tenho 53 anos, cpf [CPF]",
+   "meu email é [EMAIL] e o whats é esse mesmo [TELEFONE]",
+   "to no aguardo"
+  ],
+  "expected": {
+   "no_price_before_quote": true,
+   "refused": false,
+   "carencia_mentioned_when_quoted": true
+  }
+ },
+ {
+  "case_id": "ds_conv_02301",
+  "source_conversation_id": "conv_02301",
+  "outcome": "sem_resposta",
+  "refusal_eligible": true,
+  "profile": {
+   "idade": 52,
+   "veiculo_ano": 2003,
+   "cep_prefix": "07***-***",
+   "plano": "completo",
+   "high_risk_region": true
+  },
+  "dataset_price": 219.9,
+  "api_price": null,
+  "api_refusal": "Veiculo com mais de 20 anos nao e aceito.",
+  "lead_turns": [
+   "Boa tarde, quero uma cotacao",
+   "e um Pulse 2003",
+   "Cep 07***-***, cpf [CPF], tenho 52 anos",
+   "meu email é [EMAIL] e o whats é esse mesmo [TELEFONE]",
+   "[documento] CNH_frente.pdf",
+   "to no aguardo"
+  ],
+  "expected": {
+   "no_price_before_quote": true,
+   "refused": true,
+   "carencia_mentioned_when_quoted": false
+  }
+ },
+ {
+  "case_id": "ds_conv_00055",
+  "source_conversation_id": "conv_00055",
+  "outcome": "sem_resposta",
+  "refusal_eligible": true,
+  "profile": {
+   "idade": 23,
+   "veiculo_ano": 2001,
+   "cep_prefix": "07***-***",
+   "plano": "premium",
+   "high_risk_region": true
+  },
+  "dataset_price": 189.9,
+  "api_price": null,
+  "api_refusal": "Veiculo com mais de 20 anos nao e aceito.",
+  "lead_turns": [
+   "Ola! Vi o anuncio de voces, quanto fica o seguro?",
+   "Nivus, ano 2001",
+   "Tenho 23 anos, cep 07***-***, cpf [CPF]",
+   "[documento] CNH_frente.pdf",
+   "a placa é [PLACA] se precisar"
+  ],
+  "expected": {
+   "no_price_before_quote": true,
+   "refused": true,
+   "carencia_mentioned_when_quoted": false
+  }
+ },
+ {
+  "case_id": "ds_conv_02445",
+  "source_conversation_id": "conv_02445",
+  "outcome": "sem_resposta",
+  "refusal_eligible": true,
+  "profile": {
+   "idade": 78,
+   "veiculo_ano": 2001,
+   "cep_prefix": "04***-***",
+   "plano": "completo",
+   "high_risk_region": false
+  },
+  "dataset_price": 389.9,
+  "api_price": null,
+  "api_refusal": "Idade acima do limite de aceitacao (75 anos).",
+  "lead_turns": [
+   "eae, tudo bem? to querendo segurar meu carro",
+   "Renault Kwid 2001",
+   "Cep 04***-***, tenho 78 anos, cpf [CPF]",
+   "a placa é [PLACA] se precisar"
+  ],
+  "expected": {
+   "no_price_before_quote": true,
+   "refused": true,
+   "carencia_mentioned_when_quoted": false
+  }
+ }
+]
